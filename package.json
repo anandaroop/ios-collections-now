@@ -17,6 +17,7 @@
     "build:local": "next build && next export",
     "deploy": "next build && next export && now",
     "deploy:prod": "next build && next export && now --prod",
-    "start": "next start"
+    "start": "next start",
+    "update": "http post https://kaws.artsy.net/graphql query=@queries/allCollections.graphql | jq > ./data/allCollections.json"
   }
 }
